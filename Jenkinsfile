@@ -11,8 +11,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Clone the repository containing the Dockerfile
-                git 'https://github.com/DuyAccel/Jenkins-Docker.git'
-            }
+                git branch: 'main', url: 'https://github.com/DuyAccel/Jenkins-Docker.git'
         }
 
         stage('Build Docker Image') {
